@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca Digital</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-glow"></div>
+  <main class="container">
+    <header class="cabecalho">
+      <div>
+        <span class="tag">📚 SISTEMA DE BIBLIOTECA</span>
+        <h1>Biblioteca Digital</h1>
+        <p>Cadastre, consulte, empreste, devolva e remova livros.</p>
+      </div>
+      <div class="icone-livro">📖</div>
+    </header>
+
+    <section class="form-card">
+      <h2>Adicionar novo livro</h2>
+      <form id="form-livro">
+        <div class="campo">
+          <label for="input-titulo">Título</label>
+          <input id="input-titulo" name="titulo" placeholder="Ex.: O Pequeno Príncipe" required />
+        </div>
+        <div class="campo">
+          <label for="input-autor">Autor</label>
+          <input id="input-autor" name="autor" placeholder="Ex.: Antoine de Saint-Exupéry" required />
+        </div>
+        <div class="campo campo-ano">
+          <label for="input-ano">Ano</label>
+          <input id="input-ano" name="ano" type="number" placeholder="Ex.: 1943" />
+        </div>
+        <button class="btn btn-primary" type="submit">＋ Cadastrar livro</button>
+      </form>
+    </section>
+
+    <div id="mensagem-erro" class="mensagem oculto"></div>
+
+    <section class="lista-section">
+      <div class="lista-header">
+        <div>
+          <h2>Livros cadastrados</h2>
+          <p>Gerencie os livros disponíveis na biblioteca.</p>
+        </div>
+        <span id="contador-livros" class="contador">0 livros</span>
+      </div>
+      <ul id="lista-livros"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
